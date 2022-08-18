@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            /* perspective: 900px; */
+        }
+        .dei{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            transition: all .4s;
+            transform-style: preserve-3d;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+        .game,.role{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            line-height: 200px;
+            text-align: center;
+            font-size: 24px;
+            color: #fff;
+        }
+        .game{
+            background-color: aqua;
+            /* z-index: -1; */
+            backface-visibility:hidden;
+        }
+        .role{
+            background-color: lightpink;
+            transform: rotateY(180deg);
+        }
+        .dei:hover{
+            transform: rotateY(180deg)
+        }
+        .max{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            transition: all .4s;
+            transform-style: preserve-3d;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+        .game2,.role1{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 120px;
+            border-radius: 2%;
+            line-height: 120px;
+            text-align: center;
+            font-size: 24px;
+            color: #fff;
+        }
+        .game2{
+            background-color: yellowgreen;
+            backface-visibility:hidden;
+            transform: translateZ(60px);
+        }
+        .role1{
+            background-color: green;
+            transform:translateX(-100px) rotateY(-90deg);
+            backface-visibility:hidden;
+        }
+        .max:hover{
+            transform: rotateY(90deg)
+        }
+    </style>
+</head>
+<body>
+    <div class="dei">
+        <div class="role">龙影</div>
+        <div class="game">时空猎人</div>
+    </div>
+    <div class="max">
+        <div class="role1">枪械师</div>
+        <div class="game2">时空猎人</div>
+    </div>
+</body>
+</html>
